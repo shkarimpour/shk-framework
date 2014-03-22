@@ -1,0 +1,10 @@
+{
+	"db" : "mysql"
+	,"mysql":{
+		"host":"localhost"
+		,"user":"root"
+		,"password":"12345"
+		,"database":"behesht_cms"
+		,"port":3306
+	}
+}

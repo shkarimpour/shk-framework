@@ -1,15 +1,14 @@
-var post = {
-	all:function(next){
-		var di = post.di;
-		var db = di.db();
-		db.connect();
-		var sql = "select * from posts";
-		db.query(sql,function(err,posts){
-			db.end();
-			if(err) return next(err,null)
-			next(false,posts);
-		});
-	}
-}
+module.exports = function(di){
+	var db = di.db;
+	var DB = di.DB;
+	
+	var Post = db.define('Post',{
+		title:DB.STRING(2000)
+		,des : DB.TEXT
+		,content:DB.TEXT
+		,slug:DB.STRING(2000)
+		,viewType:DB.INTEGER
+	});
 
-module.exports = post;
+	return Post;
+};

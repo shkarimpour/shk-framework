@@ -1,4 +1,5 @@
 {
 	"controllersPath" : "controllers"
 	,"modelsPath" : "models"
+	,"viewsPath" : "views"
 }

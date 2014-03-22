@@ -1,15 +1,22 @@
+module.exports = function(di){
 
-var home = {
+	models = di.models;
 
-	index: function(req,res){
-		res.render('site/index');
-	}
+	var home = {
 
-	,recentPosts:function(req,res){
-		home.models.post.all(function(err,posts){
-			if(!err) res.render('site/posts',{posts:posts});
-		});
-	}
-};
+		index: function(req,res){
+			res.render('site/index');
+		}
 
-module.exports = home;
+		,recentPosts:function(req,res){
+			models.Post
+					.findAll({limit:2})
+					.success(function(posts){
+						res.render('site/posts',{posts:posts});
+					});
+		}
+	};
+
+	return home;
+
+}
