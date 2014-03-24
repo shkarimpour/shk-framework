@@ -1,4 +1,4 @@
 shk-framework
 =============
 
-a framework built on top of node.js and express
+a framework built on top of node.js and express in coffeescript.
