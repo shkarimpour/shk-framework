@@ -1,0 +1,10 @@
+extends ../../layouts/index
+
+
+block title 
+	|Posts - 
+
+block content
+	ul
+		each post in posts
+			li= post.title

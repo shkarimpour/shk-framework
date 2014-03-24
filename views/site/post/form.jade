@@ -1,0 +1,20 @@
+extends ../../layouts/index
+
+block title 
+	|Form of Post - 
+
+block content
+	form(action=routes.savePost,method="post")
+		div
+			|title :
+			input(type="text",name="title")
+		div
+			|des :
+			textarea(name="des")
+		div
+			|content :
+			textarea(name="content")
+		input(type="submit",value="create")
+
+	a(href=routes.recentPosts) posts
+	

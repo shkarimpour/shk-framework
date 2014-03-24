@@ -12,6 +12,7 @@ var config = require('./config');
 var Sequelize = require('sequelize');
 var _ = require('underscore');
 var sanitizer = require("sanitizer");
+var path = require('path');
 
 //define app and db
 var app = new App();
@@ -31,7 +32,13 @@ var di = {
     ,sanitizer:sanitizer
     ,xss:sanitizer.sanitize
     ,e:sanitizer.escape
+    ,viewsPath:function(name){
+      return path.join(__dirname,di.config.autoload.viewsPath,name);
+    }
 };
+
+//set some views add ons
+di.app.locals.viewsPath = di.viewsPath;
 
 //assign routes
 Routing(di);
@@ -71,7 +78,7 @@ app.locals._ = _;
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
-    res.render('error/404');
+    res.render('site/error/404');
 });
 
 //set debug
