@@ -14,6 +14,8 @@
     "debug": "~0.7.4",
     "ejs": "~0.8.5",
     "sequelize": "~1.7.0",
-    "underscore": "~1.6.0"
+    "underscore": "~1.6.0",
+    "sanitizer": "~0.1.1",
+    "coffee-script": "~1.7.1"
   }
 }

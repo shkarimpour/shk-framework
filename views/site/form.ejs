@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>create post - SHK FRAMEWORK</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>create post</h1>
+    <form action="<%= routes.savePost %>" method="post">
+    	<div>
+    		title : <input type="text" name="title">
+    	</div>
+    	<div>
+    		des : <textarea name="des"></textarea>
+    	</div>
+    	<div>
+    		content : <textarea name="content"></textarea>
+    	</div>
+    	<input type="submit" value="create">
+    </form>
+    <a href="<%= routes.recentPosts %>">posts</a>
+  </body>
+</html>

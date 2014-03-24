@@ -2,4 +2,6 @@
 	"controllersPath" : "controllers"
 	,"modelsPath" : "models"
 	,"viewsPath" : "views"
+	,"routesPath":"routes"
+	,"filtersPath":"filters"
 }
