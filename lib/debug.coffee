@@ -5,18 +5,18 @@ module.exports = (di)->
     # will print stacktrace
     if di.app.get('env') is 'development'
         di.app.use (err, req, res, next) ->
-            res.render 'error/index', 
+            res.render 'site/error/index', 
                 message: err.message
                 error: err
 
     # production error handler
     # no stacktraces leaked to user
     di.app.use (err, req, res, next) ->
-        res.render 'error/index', 
+        res.render 'site/error/index', 
             message: err.message
             error: {}
   else 
     #when debug is off
-    di.app.use (err, req, res, next)-> res.render('error/404')
+    di.app.use (err, req, res, next)-> res.render('site/error/404')
 
   true

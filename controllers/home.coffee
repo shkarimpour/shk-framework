@@ -5,16 +5,16 @@ module.exports = (di)->
 	home = 
 
 		index: (req,res)->
-			res.render 'site/index' 
+			res.render 'site/home/index' 
 
 		recentPosts:(req,res)->
 			models.Post
 					.all()
 					.success (posts)->
-						res.render('site/posts',{posts:posts})
+						res.render('site/post/index',{posts:posts})
 
 		form:(req,res)->
-			res.render 'site/form'
+			res.render 'site/post/form'
 
 		savePost:(req,res)->
 			title = req.param 'title'

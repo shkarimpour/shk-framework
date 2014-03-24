@@ -9,3 +9,4 @@ framework depends on :
 - express
 - sequelize
 - coffeescript
+- jade

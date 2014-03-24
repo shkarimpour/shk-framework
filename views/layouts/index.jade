@@ -1,0 +1,9 @@
+- layout = layout ? layout : 0;
+
+case layout
+	when 0
+		include public
+	when 1
+		include admin
+	default
+		include public
