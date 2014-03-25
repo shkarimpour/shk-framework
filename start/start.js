@@ -3,8 +3,10 @@
 //require coffee script compiler
 require('coffee-script/register');
 
-//load shk framework
-var shk = require('../lib');
+//load shk framework if loaded locally
+var shk = require('../shk');
+//load shk framework if loaded by npm
+//var shk = require('shk');
 
 //make a shk framework instance
 var di = shk();
