@@ -4,4 +4,5 @@
 	,"viewsPath" : "views"
 	,"routesPath":"routes"
 	,"filtersPath":"filters"
+	,"debugFilePath":"./debug"
 }
