@@ -1,13 +1,25 @@
 {
-  "name": "application-name",
-  "version": "0.1.0",
-  "private": true,
+  "name": "shkframework",
+  "version": "1.0.1",
+  "description": "a simple mvc framework on top of nodejs and coffescript",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./start/start.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-  	"coffee-script": "~1.7.1",
-    "shk-framework-core":"~0.0.0",
-    "debug": "~0.7.4"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shkarimpour/shk-framework.git"
+  },
+  "keywords": [
+    "mvc",
+    "nodejs",
+    "framework",
+    "coffeescript"
+  ],
+  "author": "shaahin karimpour <shaahin.karimpour902@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shkarimpour/shk-framework/issues"
+  },
+  "homepage": "https://github.com/shkarimpour/shk-framework#readme"
 }
